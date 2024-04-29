@@ -10,3 +10,7 @@ def recursiva(valor):
     
 
 recursiva(5)
+
+if True:
+    print("throwing error")
+    raise Exception("Error")
