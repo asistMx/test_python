@@ -48,11 +48,11 @@ if __name__ == "__main__":
     palabra_oculta = ['_'] * len(palabra)
     
     contador = 0
-    vidas = len(palabra)
+    vidas = 6
     letras_adivinadas = []
-    while contador < len(palabra):
+    while vidas >= 0:
         contador += 1
-        vidas -= 1
+       
         print(f'Vidas {vidas} restantes')
         letra = pedir_letra()
         if validar_letra(letra, palabra):
@@ -61,7 +61,8 @@ if __name__ == "__main__":
             mostrar_palabra(palabra,palabra_oculta, letras_adivinadas)
             print(f"{palabra_oculta}")
         else:
-            print('La letra no esta en la palabra')
+            print(f"La letra {letra} no esta en la palabra")
+            vidas -= 1
 
         if '_' not in palabra_oculta:
             print('Felicidades, adivinaste la palabra')
