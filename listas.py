@@ -103,3 +103,13 @@ print(lista is lista_cop)
 lista_copia = lista.copy()
 
 print(lista is lista_copia)
+
+
+
+lista_nombres = ['Juan', 'Pedro', 'Maria', 'Ana']
+
+for indice, nombre in enumerate(lista_nombres):
+    print(f"El nombre {nombre} esta en la posicion {indice}")
+
+
+    
